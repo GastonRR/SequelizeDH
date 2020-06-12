@@ -1,0 +1,2 @@
+# SequelizeDH
+Test Sequelize
