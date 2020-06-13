@@ -1,2 +1,3 @@
 # SequelizeDH
-Test Sequelize
+Test Sequelize!
+
