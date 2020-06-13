@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/movies/search" method = "POST">
+        <input type="search" name="search" placeholder="Busca tu producto">
+        <button type="submit">Buscar</button>
+    </form>
+    <% if (typeof errors == 'undefined') { %>
+        <ul>
+            <% for( let i = 0; i < peliculas.length; i++ ) { %>
+                <li>
+                    <a href="/movies/detail/<%= peliculas[i].id %> ">
+                        <%= peliculas[i].title %> 
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    <% } else { %>
+    <h4 style="color: red">
+            <%= errors.msg %> 
+        </h4>
+    <% } %>  
+  
+  
+</body>
+</html>
